@@ -1,0 +1,17 @@
+<%= form_for @post do |f|%>
+	<div class="title-container">
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div class="gif-container">
+		<%= f.label :gif %>
+		<%= f.text_field :gif %>
+	</div>
+	<div class="votes-container">
+		<%= f.label :votes %>
+		<%= f.text_field :votes %>
+	</div>
+	<%= f.submit "Submit" %>
+<%end%>
+<br/>
+<%= link_to "Back to posts", posts_path %>
