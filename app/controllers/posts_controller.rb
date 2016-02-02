@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   include PostsHelper
   
   def index
-  	@posts = Post.all
+  	@posts = Post.where("votes > '4'")
   end
 
   def show
