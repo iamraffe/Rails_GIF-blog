@@ -1,15 +1,15 @@
-<h1>Best GIF Posts</h1>
+<h1 class="main-title">Best GIF Posts</h1>
 
 <%= link_to("New GIF Post", new_post_path) %>
 
-<ul>
+<ul class="list-group">
 
   <% @posts.each do |post| %>
-    <li>
-      <div>
-        <div class="post-title"><h2><%= post.title %></h2></div>
-        <div class="post-gif"><img src="<%= post.gif %>"></div>
-        <div class="post-votes"><%= post.votes %></div>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="post-votes col-md-2"><%= post.votes %></div>
+        <div class="post-title col-md-4"><h2><%= post.title %></h2></div>
+        <div class="post-gif col-md-7"><img src="<%= post.gif %>"></div>
       </div>
     </li>
 
