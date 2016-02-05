@@ -1,4 +1,9 @@
-<!-- <h1 class="main-title">Best GIF Posts</h1>
+<h1 class="main-title">Best GIF Posts</h1>
+
+<select id="sort">
+ <option value="created_at">Creation</option>
+ <option value="votes">Votes</option>
+</select>
 
 <%= link_to("New GIF Post", new_post_path) %>
 
@@ -15,5 +20,4 @@
 
   <% end %>
 
-</ul> -->
-<%= render partial:"partials/list" %>
+</ul>
