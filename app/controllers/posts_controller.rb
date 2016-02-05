@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   include PostsHelper
-  
+
   def index
   	#byebug
-  	if (params[:sort]) 
+  	if (params[:sort])
   		@posts = Post.order(params[:sort].to_sym)
-  		render js: {}
+  		render json: {}
   	else
   		@posts = Post.all
   	end
@@ -13,17 +13,17 @@ class PostsController < ApplicationController
 
   def high_rated_index
   	#byebug
-  	if (!params["sort"].nil?) 
+  	if (!params[:sort].nil?)
   		@posts = Post.order(params[:sort].to_sym)
+      # render :home
   		#render json: {partial: render :partial => "partials/list"}
-  		
-  		render js: {}
+  		# render js: {}
+      # render json: {status: 200}
   	else
-  		  	@posts = Post.where("votes > '4'")
+  	 @posts = Post.where("votes > '4'")
 
-  	render :home
   	end
-
+    render :home
   end
 
   def low_rated_index

@@ -1,9 +1,13 @@
 <h1 class="main-title">Best GIF Posts</h1>
 
-<select id="sort">
+<%= link_to "Creation", "/?sort=created_at", controller: "posts", action: "high_rated_index", :sort => "created_at" %>
+
+<%= link_to "Votes", "/?sort=votes", controller: "posts", action: "high_rated_index", :sort => "votes" %>
+
+<!-- <select id="sort">
  <option value="created_at">Creation</option>
  <option value="votes">Votes</option>
-</select>
+</select> -->
 
 <%= link_to("New GIF Post", new_post_path) %>
 

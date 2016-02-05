@@ -1,6 +1,6 @@
 $(document).on('change', "#sort", function(){
 
-  var sort = $(this).val(); 
+  var sort = $(this).val();
 
   $.ajax({
   	type: "get",
@@ -9,7 +9,7 @@ $(document).on('change', "#sort", function(){
   	dataType: "json",
   	success: function(response){
   		console.log("body");
-  		$("#body").html("")
+  		$("body").html("")
   	},
   	error: function(error){
   		console.log(error)
